@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MegaFawn: Gilgamesh</title>
+  <meta name="description" content="MegaFawn's GILGAMESH, an avant-garde puppet opera debuting at HERE's Puppetopia, April 2027.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL89G7E1PV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EL89G7E1PV');
+  </script>
+
+  <style>
+    :root {
+      --magenta: #f0f;
+      --yellow: #ff0;
+      --gold: #fc0;
+      --grey: #aaa;
+      --border-color: #f0f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: #000;
+      color: var(--magenta);
+      font-family: monospace;
+      font-size: 19px;          /* was the browser default (~16px) */
+      line-height: 1.55;
+      margin: 0;
+      padding: 50px 24px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Eczar', serif;
+      font-weight: 800;
+      font-size: 44px;
+      line-height: 1.1;
+      color: var(--yellow);
+      text-align: center;
+      margin: 0 0 1.5rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--magenta);
+    }
+
+    h2 {
+      color: var(--gold);
+      font-size: 1.5em;
+      margin: 3rem 0 1rem;
+    }
+
+    a { color: var(--yellow); }
+
+    .hl { color: var(--yellow); }
+
+    /* Big yellow donate link */
+    .donate {
+      display: block;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .donate a {
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: 26px;
+      text-decoration: underline;
+    }
+
+    /* Image + video side by side, stacking on phones */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .hero > img { width: 360px; }
+
+    .video-wrapper {
+      width: 500px;
+      max-width: 100%;
+      border: 4px solid var(--border-color);
+      background: #000;
+    }
+    .video-wrapper .ratio {
+      padding: 100% 0 0 0;
+      position: relative;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    figure { margin: 2rem auto; }
+    figure img { margin: 0 auto; }
+
+    .tiers {
+      list-style: none;
+      padding: 0;
+    }
+    .tiers li { margin: .6rem 0; }
+    .tiers b { color: var(--yellow); }
+
+    .fragment {
+      color: var(--grey);
+      font-style: italic;
+      margin: 2rem 0;
+    }
+
+    /* Image gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 1.5rem 0;
+    }
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .sizzle {
+      max-width: 400px;
+      margin: 2rem auto;
+    }
+    .sizzle video {
+      width: 100%;
+      border: 1px solid #333;
+    }
+
+    /* Archived schedule, collapsed by default */
+    details {
+      border: 1px dashed var(--magenta);
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+    }
+    summary {
+      cursor: pointer;
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .schedule dt {
+      color: var(--yellow);
+      margin-top: 1rem;
+    }
+    .schedule dd { margin-left: 1.5rem; }
+    .note { color: var(--grey); }
+
+    .lacunae {
+      color: var(--yellow);
+      text-decoration: underline;
+      list-style: none;
+      padding: 0;
+    }
+
+    .divider {
+      color: var(--yellow);
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 2rem 0;
+    }
+
+    footer { margin-top: 3rem; }
+
+    @media (max-width: 600px) {
+      body { padding: 28px 16px; font-size: 18px; }
+      h1 { font-size: 32px; }
+      .donate a { font-size: 21px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <h1>MEGAFAWN // GILGAMESH</h1>
+
+  <p>
+    The MegaFawn Collective's
+    [<a href="https://instagram.com/megafawnx" target="_blank" rel="noopener">ig</a>]
+    "GILGAMESH" will debut at HERE's PUPPETOPIA in April 2027 as an avant-garde retelling
+    of the first epic: the mystic ontology of climate collapse, the origins of patriarchy,
+    queer love &amp; war, writing and the bicameral "sentient" mind.
+  </p>
+
+  <p class="donate">
+    <a href="https://here.app.getcuebox.com/o/CCTQ0T6B/donate/9RH7JHTQ">
+      * Support the Project at HERE (tax deductible!) *
+    </a>
+  </p>
+
+  <div class="hero">
+    <img src="images/TabletsJokeMask.jpeg" alt="Tablets and joke mask" width="400" height="700">
+    <div class="video-wrapper">
+      <div class="ratio">
+        <iframe
+          src="https://player.vimeo.com/video/1231679828?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="MegaFawn Gilgamesh video"></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
+  <h2>Origin Story</h2>
+
+  <p>
+    We fell in love with Gilgamesh while teaching it to high schoolers over covid in a
+    Cascadian Forest School and became determined to develop a deep and strange incarnation
+    of the story.
+  </p>
+  <p>
+    Since then, we have grown the project there and in NYC with the support of the
+    Jim Henson Foundation.
+  </p>
+
+  <figure>
+    <img src="images/ogsketches.png" alt="Original sketches" width="400" height="300">
+  </figure>
+
+  <p>
+    In 2026 we built it up in a residency at Flux Factory and performed fragments, glosses
+    and paratexts of the Epic all up and down NYC's G train in preparation for three sold-out
+    in-progress shows at Future Space in Queens.
+  </p>
+
+  <figure>
+    <img src="images/7thAVEziggurat.jpg" alt="G Train Ziggurat at 7th Ave" width="500" height="500">
+  </figure>
+
+  <p>
+    We will be debuting tablets I–V at HERE Theater's Puppetopia in April 2027, and are now
+    fundraising for the latter half of the expanded production, with better sets, puppets
+    and production and a threefold increased cast.
+  </p>
+
+  <h2>Gifts for Donors</h2>
+
+  <p>Donations through HERE Arts' portal are tax deductible, and can be accompanied by gifts:</p>
+
+  <figure>
+    <img src="images/gifts.png" alt="Donor gifts: posters, cranky show, zine" width="800" height="400">
+  </figure>
+
+  <ul class="tiers">
+    <li><b>$100</b> — a risograph poster of the major characters, or the cuneiform map of NYC's G line</li>
+    <li><b>$250+</b> — a bite-sized cranky show of tablets I–V</li>
+    <li><b>$500+</b> — both posters, the cranky and a paratext zine</li>
+    <li><b>$2000+</b> — a short private showing in the NYC area</li>
+  </ul>
+
+  <p class="donate">
+    <a href="https://here.app.getcuebox.com/o/CCTQ0T6B/donate/9RH7JHTQ">
+      * Support the Project at HERE (tax deductible!) *
+    </a>
+  </p>
+
+  <figure>
+    <img src="images/biomes.jpeg" alt="Biomes / voyage" width="800" height="300">
+  </figure>
+
+  <div class="fragment">"He who saw the Deep, the country's foundation..."</div>
+
+  <h2>Traces</h2>
+
+  <p>
+    Epic glosses, footnotes, para-texts [&amp; more] along NYC's "G" train, May 2026 —
+    including fragments of the Enuma Elish, Lugalbanda, Bilgames &amp; Huwawa, and analyses
+    by Andrew George, Rivkah Scharf Kluger, Sophus Helle &amp; others!
+  </p>
+
+  <div class="gallery">
+    <img src="images/Gilgameshv3pt0.jpeg" alt="Ink sketch" width="300" height="300" loading="lazy">
+    <img src="images/Gilgameshv2pt0.jpeg" alt="Gilgamesh sketch" width="300" height="300" loading="lazy">
+    <img src="images/Ninsun.jpeg" alt="Ninsun" width="300" height="300" loading="lazy">
+    <img src="images/GilgaPishtim.jpeg" alt="Gilgamesh and Utnapishtim" width="300" height="300" loading="lazy">
+    <img src="images/BunrakuishTwo.jpeg" alt="Bunraku-style puppets" width="300" height="300" loading="lazy">
+    <img src="images/GilgaFemme.jpeg" alt="Gilgamesh femme" width="300" height="300" loading="lazy">
+    <img src="images/ForestofCedars.jpeg" alt="Forest of Cedars" width="300" height="300" loading="lazy">
+    <img src="images/Utnapishtim.jpeg" alt="Utnapishtim" width="300" height="300" loading="lazy">
+    <img src="images/VenusMarkheaded.jpg" alt="Venus Markheaded" width="300" height="300" loading="lazy">
+  </div>
+
+  <div class="sizzle">
+    <video controls playsinline preload="metadata">
+      <source src="images/GilgameshProtoSizzle.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <details>
+    <summary>Archive: NYC G Train Schedule, May 2026</summary>
+
+    <img src="GilgameshGtrainDraft.gif" alt="G train slideshow" width="408" height="225" loading="lazy" style="margin-top:1rem">
+
+    <dl class="schedule">
+      <dt>May 7, Thursday — ATRAHASIS</dt>
+      <dd>Court Square, 2pm</dd>
+
+      <dt>May 8, Friday — ENUMA ELISH</dt>
+      <dd>21st St, 1pm</dd>
+
+      <dt>May 10, Sunday — NINSUN</dt>
+      <dd>Greenpoint Ave, 1pm</dd>
+      <dd>Nassau, 4pm</dd>
+
+      <dt>May 11, Monday — CUNEIFORM</dt>
+      <dd>Flushing, 7pm</dd>
+      <dd>Myrtle-Willoughby, 9pm</dd>
+
+      <dt>May 12, Tuesday — SEX</dt>
+      <dd>Bedford-Nostrand, 7pm <span class="note">[reprise pending]</span></dd>
+      <dd>Broadway, 9pm <span class="note">[reprise pending]</span></dd>
+
+      <dt>May 14, Thursday — MORTALITY</dt>
+      <dd>Fulton St, 6pm</dd>
+      <dd>Bergen St, midnight</dd>
+
+      <dt>May 15, Friday — META</dt>
+      <dd>Hoyt-Schermerhorn, noon <span class="note">[cancelled, reprised the following week]</span></dd>
+      <dd>Carroll St, 2pm <span class="note">[cancelled, reprised the following week]</span></dd>
+
+      <dt>May 17, Sunday — DIVINITY</dt>
+      <dd>4th Ave, noon</dd>
+      <dd>Full train runs from Church Ave northwards at 1pm and Court Sq southwards at 2pm</dd>
+
+      <dt>May 18, Monday — ARCHITECTURE</dt>
+      <dd>Smith-9th, 7pm</dd>
+      <dd>Carroll St, 8pm</dd>
+      <dd>7th Ave, 9pm</dd>
+
+      <dt>May 19, Tuesday — CIVILIZATION</dt>
+      <dd>Metropolitan, 7pm</dd>
+      <dd>Hoyt-Schermerhorn, 8pm</dd>
+      <dd>Classon, 9pm</dd>
+
+      <dt>May 21, Thursday — NATURE</dt>
+      <dd>15th St–Prospect Park, noon</dd>
+      <dd>Fort Hamilton Parkway, 1pm <span class="note">[changed for weather/technical reasons]</span></dd>
+
+      <dt>May 22, Friday — ONTOLOGY</dt>
+      <dd>Clinton-Washington, 7pm</dd>
+      <dd>Broadway, 8pm</dd>
+      <dd>Bergen St, 9pm</dd>
+      <dd>World at Church Ave, 10pm</dd>
+    </dl>
+
+    <p>
+      Followed by a work-in-progress of the first five tablets at
+      <a href="https://www.futurespace.studio/events/gilgamesh-fragments-of-megalithic-puppet-opera-2026-06-04-20-00">Future Space</a>,
+      June 4–6, 2026.
+    </p>
+  </details>
+
+  <div class="divider">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+
+  <p>Lacunae soon to be filled (more dead links):</p>
+  <ul class="lacunae">
+    <li>Historiography of Patriarchy</li>
+    <li>Bicameral Non/Sentience</li>
+    <li>Long Term Plans in Uruk</li>
+    <li>Merch &amp; Arcana &amp; Beer</li>
+    <li>Text[uality]/Cuneiformalism</li>
+    <li>Ancient Aliens/NeoConSpiracies</li>
+    <li>The Past as the Future</li>
+    <li>Orgiastic Becoming Harimtu</li>
+    <li>Bibliography, Glossary, *Prefixes</li>
+    <li>...and Other Megafauna</li>
+  </ul>
+
+  <footer>
+    <p>
+      CONTACT US ON INSTAGRAM :(<br>
+      <a href="https://instagram.com/enormousface" target="_blank" rel="noopener">@enormousface</a>
+      <a href="https://instagram.com/minivansoundsystem" target="_blank" rel="noopener">@minivansoundsystem</a>
+      <a href="https://instagram.com/megafawnx" target="_blank" rel="noopener">@megafawnx</a>
+      <br>or by snail mail: PO 64, New York, NY 10276, USA
+    </p>
+  </footer>
+
+</main>
+</body>
+</html>
